@@ -1,0 +1,150 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Notepad" Height="450" Width="680" Icon="icon.png">
+    <Grid>
+
+        
+        
+
+        <DockPanel Background="#3D65E5" >
+            
+            <ScrollViewer VerticalScrollBarVisibility="Disabled" 
+                          HorizontalScrollBarVisibility="Auto" 
+                          DockPanel.Dock="Top"
+                          Background="#C17CE5" 
+                          >
+                <WrapPanel Background="#3D65E5" Orientation="Vertical" Height="50">
+
+                    <Label 
+                        Name="fileLabel" 
+                        Margin="20 10 0 10 " 
+                        Height="30" Width="250" 
+                        Background="#C17CE5" 
+                        Foreground="White" 
+                        FontWeight="DemiBold" 
+                        ToolTip="file name"
+                        >
+
+                    </Label>
+
+
+                    <Expander 
+                        Name ="fileExpander"  
+                        FontSize="20" 
+                        Margin="10 12 10 0" Header=""
+                        MouseDoubleClick="fileExpander_MouseDoubleClick"
+                        ToolTip="double cilke open txt file"
+                        
+                        ></Expander>
+
+                    <Button 
+                        Name ="saveButton"
+                        Content="save"
+                        Margin="0 10 0 0"  
+                        Height="30" Width="45" 
+                        Background="#C17CE5" 
+                        FontWeight="DemiBold" 
+                        Foreground="White" Click="saveButton_Click" 
+                        ToolTip="save"
+                        >
+
+                      
+
+                    </Button>
+
+                    <CheckBox
+                        
+                        Name ="otoSaveCheckBox"
+                        Margin="15 15 10 0"
+                        ToolTip="oto save"
+                        Background="#C17CE5"
+                        
+                        
+                        />
+
+
+                    <Button 
+                        Name ="cutButton"
+                        Content ="cut" 
+                        Margin="5 10 15 0"  
+                        Height="30" Width="35" 
+                        Background="#C17CE5" 
+                        FontWeight="DemiBold" 
+                        Foreground="White" Click="cutButton_Click" 
+                        ToolTip="cut = Ctrl + x"
+                        />
+
+                    <Button 
+                        Name ="copyButton"
+                        Content ="copy" 
+                        Margin="0 10 15 0"  
+                        Height="30" Width="45" 
+                        Background="#C17CE5" 
+                        FontWeight="DemiBold" 
+                        Foreground="White" Click="copyButton_Click" 
+                        ToolTip="copy = Ctrl + c"
+                        />
+
+                    <Button 
+                        Name ="pasteButton"
+                        Content ="paste" 
+                        Margin="0 10 15 0"  
+                        Height="30" Width="50" 
+                        Background="#C17CE5" 
+                        FontWeight="DemiBold" 
+                        Foreground="White" Click="pasteButton_Click" 
+                        ToolTip="paste = Ctrl + v"
+                        />
+
+                    <Button 
+                        Name ="selectAllButton"
+                        Content ="select all" 
+                        Margin="0 10 15 0"  
+                        Height="30" Width="65" 
+                        Background="#C17CE5" 
+                        FontWeight="DemiBold" 
+                        Foreground="White" Click="selectAllButton_Click" 
+                        ToolTip="select all = Ctrl + a"
+                        />
+                    
+                    
+                    
+                </WrapPanel>
+            </ScrollViewer>
+
+            <TextBox
+                Name ="yazTextBox"
+                Margin="15 5 15 15"
+                Background="#C17CE5" 
+                FontWeight="DemiBold" 
+                Foreground="White"
+                Width="635"
+                
+                AcceptsReturn="True"
+                AcceptsTab="True"
+                TextWrapping="Wrap"
+                
+                
+                
+                ></TextBox>
+          
+            
+        </DockPanel>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
